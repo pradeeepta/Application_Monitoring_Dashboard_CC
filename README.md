@@ -71,68 +71,6 @@ docker-compose logs -f api-server
 docker-compose ps
 ```
 
-### Troubleshooting
-
-1. **If Graphs Stop Updating**:
-```bash
-# Restart the workload simulator
-docker-compose restart workload-simulator
-```
-
-2. **If API Server is Unreachable**:
-```bash
-# Restart the API server
-docker-compose restart api-server
-```
-
-3. **Complete Reset**:
-```bash
-# Stop everything and remove volumes
-docker-compose down -v
-
-# Start fresh
-docker-compose up -d
-```
-
-### Best Practices
-
-1. **Before Demos/Presentations**:
-   ```bash
-   # Fresh start
-   docker-compose down
-   docker-compose up -d
-   # Wait 1-2 minutes
-   ```
-
-2. **Grafana Dashboard Settings**:
-   - Set time range to "Last 5 minutes" (top-right)
-   - Set refresh rate to 5s (top-right)
-   - Use fullscreen mode (press 'F')
-
-3. **Resource Management**:
-   - Monitor Docker Desktop resources
-   - Restart Docker Desktop if memory usage is too high
-   - Clean up old containers and volumes periodically:
-     ```bash
-     docker system prune -f
-     ```
-
-### Common Issues and Solutions
-
-1. **"This site can't be reached"**:
-   - Wait 30-60 seconds after starting services
-   - Check if Docker Desktop is running
-   - Try restarting the specific service
-
-2. **Graphs Show No Data**:
-   - Verify workload simulator is running
-   - Check API server logs for errors
-   - Restart workload simulator if needed
-
-3. **High Memory Usage**:
-   - Stop unused services
-   - Restart Docker Desktop
-   - Reduce retention period in Prometheus/Loki
 
 ## Features
 
