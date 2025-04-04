@@ -187,6 +187,10 @@ The platform includes a workload simulator that:
 - 5-second refresh rate
 - 15-minute time window by default
 
+## Screenshots 
+![image](https://github.com/user-attachments/assets/cd7e4ef9-cf9d-4f36-a91e-e59aa362a2d8)
+
+
 ## Troubleshooting
 
 1. View service logs:
